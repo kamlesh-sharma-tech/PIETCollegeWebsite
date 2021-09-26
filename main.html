@@ -1,0 +1,542 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+    <title>PIET JAIPUR</title>
+    <style>
+      input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: #2980b9;
+  color: white;
+  transform: rotateY(180deg);
+}
+.flip-card-back button{
+    border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: #fff;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.flip-card-back button:hover{
+  opacity: 0.7;
+}
+.flip-card-back a{
+  text-decoration: none;
+  font-size: 20px;
+  color: red;
+}
+.flip-card-back a:hover{
+   opacity:0.7;
+}
+.flip-card-back a #instagram{
+  color: rgb(204, 0, 204);
+}
+.flip-card-back a #facebook{
+        color: darkblue;
+}
+.flip-card-back a #twitter{
+        color: rgb(0, 51, 204);
+}
+
+#myImg {
+  cursor: pointer;
+  transition: 0.3s;
+}
+#myImg:hover{
+	opacity: 0.9;
+}
+.navbar{
+  background: linear-gradient(to left, blue, purple);
+}
+
+    </style>
+  </head>
+  <body>
+
+        <section id="nav-bar">
+     
+
+        <!--navigation bar-->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+  <h5 class="text-white mt-auto font-weight-bold">POORNIMA INSTITUTE</h5>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  
+
+  
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto right-side">
+    	 
+      <li class="nav-item active ">
+       <a class="nav-link font-weight-bold" href="#"> <i class="fa fa-home mr-2"></i>Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold"href="#aboutus"><i class="fa fa-file-text-o mr-2"></i>About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link font-weight-bold"href="#gallery"><i class="fa fa-picture-o mr-2"></i>Gallery</a>
+      </li>
+      <li class="nav-item ">
+        <a class="nav-link font-weight-bold"href="#contact"><i class="fa fa-phone mr-2"></i>Contact Us</a>
+      </li>
+        <li class="nav-item ">
+        <a class="nav-link font-weight-bold"href="index.html"><i class="fa fa-sign-out mr-2"></i>Log out</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+</section>
+               <!--navigation bar end -->
+
+           
+               <!--image slider start-->
+                  
+                  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="images/piet.jpg" alt="First slide" id="myImg">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="images/students.jpg" alt="Second slide" id="myImg">
+    </div>
+  
+  </div>
+
+</div>
+                          <!--image slider end -->
+
+
+
+             
+                       <!--About us -->
+                                  <section class="my-2" id="aboutus">
+                <div class="py-5">
+                <h2 class="text-center font-weight-bold text-uppercase"><i class="fa fa-file-text-o mr-3"></i><u>About us</u></h2>
+                 </div>
+                 <div class="container-fluid">
+            <div class="row">
+              <div class="col-lg-6 col-md-6 col-12">
+                <img src="piet1.jpg" class="img-fluid" id="myImg"> 
+
+                </div>   
+               <div class="col-lg-6 col-md-6 col-12">
+                <h3 class="font-weight-bold display-5 text-uppercase text-danger text-center">Poornima Institute : )</h3>
+                <p class="py-3 text-primary text-capitalize">Poornima Institute of Engineering & Technology, was established in 2007 with the aim of imparting pragmatic technical education. In its magnificent journey of 12 years, PIET has set benchmarks and reached at new pinnacles in Engineering Education with dedication, perseverance and devotion. PIET is spearheading its outstanding voyage with the motto ‘Success is not a destination, it’s a journey’.</p>
+              
+              </div>
+               </div>
+               </div>
+               </section>
+                 <!--About us end-->
+
+                    <!--Gallery -->
+                    <section class="my-3" id="gallery">
+                      <div class="py-5">
+                        <h2 class="text-center text-uppercase font-weight-bold"><i class="fa fa-picture-o mr-3"></i><u>Our gallery</u></h2>
+                      </div>
+                      <div class="container-fluid">
+                        <div class="row">
+                          
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/career.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+                         
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/students.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/career.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+                         
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/students.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/career.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+                         
+                          <div class="col-lg-4 col-md-4 col-sm-4 col-12">
+                          <img src="images/students.jpg" class="img-fluid pb-3" id="myImg">
+                          </div>
+
+                         
+
+                        </div>
+                       
+                      </div>
+                    
+                    </section>
+
+
+                        <section class="my-3" id="contact">
+                          <div class="py-5">
+                            <h2 class="font-weight-bold text-uppercase text-center"><i class="fa fa-phone mr-3"></i><u>Contact us</u></h2>
+                          </div>
+                           <div class="container mt-3">
+  <form action="#">
+
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." autocomplete="off">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." autocomplete="off">
+
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      
+                      <option>Afghanistan</option>
+                      <option>Albania</option>
+                      <option>Algeria</option>
+                      <option>Andorra</option>
+                      <option>Angola</option>
+                      <option>Antigua and Barbuda</option>
+                      <option>Argentina</option>
+                      <option>ArmeniaM</option>
+                      <option>Australia</option>
+                      <option>Austria</option>
+                      <option>Azerbaijan</option>
+                      <option>Bahamas</option>
+                      <option>Bahrain</option>
+                      <option>Bangladesh</option>
+                      <option>Barbados</option>
+                      <option>Belarus</option>
+                      <option>Belgium</option>
+                      <option>Belize</option>
+                      <option>Benin</option>
+                      <option>Bhutan</option>
+                      <option>Bolivia</option>
+                      <option>Bosnia and Herzegovina</option>
+                      <option> Botswana</option>
+                      <option>Brazil</option>
+                      <option>Brunei</option>
+                      <option>Bulgaria</option>
+                      <option>Burkina Faso</option>
+                      <option>Burundi</option>
+                      <option>Cabo Verde</option>
+                      <option>Cambodia</option>
+                      <option>Cameroon</option>
+                      <option>Canada</option>
+                      <option>Central African Republic (CAR)</option>
+                      <option>Chad</option>
+                      <option>Chile</option>
+                      <option>China</option>
+                      <option>Colombia</option>
+                      <option>Comoros</option>
+                      <option>Congo, Democratic Republic of the</option>
+                      <option>Congo, Republic of the</option>
+                      <option>Costa Rica</option>
+                      <option>Cote d'Ivoire</option>
+                      <option>Croatia</option>
+                      <option> Cuba</option>
+                      <option> Cyprus</option>
+                      <option> Czechia</option>
+                      <option> Denmark</option>
+                      <option> Djibouti</option>
+                      <option> Dominica</option>
+                      <option> Dominican Republic</option>
+                      <option> Ecuador</option>
+                      <option> Egypt</option>
+                      <option> El Salvador</option>
+                      <option>Equatorial Guinea</option>
+                      <option> Eritrea</option>
+                      <option> Estonia</option>
+                      <option> Eswatini (formerly Swaziland)</option>
+                      <option> Ethiopia</option>
+                      <option>Fiji</option>
+                      <option>Finland</option>
+                      <option>France</option>
+                      <option>Gabon</option>
+                      <option>Gambia</option>
+                      <option>Georgia</option>
+                      <option>Germany</option>
+                      <option>Ghana</option>
+                      <option>Greece</option>
+                      <option>Grenada</option>
+                      <option>Guatemala</option>
+                      <option>Guinea</option>
+                      <option>Guinea-Bissau</option>
+                      <option>Guyana</option>
+                      <option>Haiti</option>
+                      <option>Honduras</option>
+                      <option>Hungary</option>
+                      <option>Iceland</option>
+                      <option>India</option>
+                      <option>Indonesia</option>
+                      <option>Iran</option>
+                      <option>Iraq</option>
+                      <option>Ireland</option>
+                      <option>Israel</option>
+                      <option>Italy</option>
+                      <option>Jamaica</option>
+                      <option>Japan</option>
+                      <option>Jordan</option>
+                      <option>Kazakhstan</option>
+                      <option>Kenya</option>
+                      <option>Kiribati</option>
+                      <option>Kosovo</option>
+                      <option>Kuwait</option>
+                      <option>Kyrgyzstan</option>
+                      <option>Laos</option>
+                      <option>Latvia</option>
+                      <option>Lebanon</option>
+                      <option>Lesotho</option>
+                      <option>Liberia</option>
+                      <option>Libya</option>
+                      <option>Liechtenstein</option>
+                      <option>Lithuania</option>
+                      <option>Luxembourg</option>
+                      <option>Madagascar</option>
+                      <option>Malawi</option>
+                      <option>Malaysia</option>
+                      <option>Maldives</option>
+                      <option>Mali</option>
+                      <option>Malta</option>
+                      <option>Marshall Islands</option>
+                      <option>Mauritania</option>
+                      <option>Mauritius</option>
+                      <option>Mexico</option>
+                      <option>Micronesia</option>
+                      <option>Moldova</option>
+                      <option>Monaco</option>
+                      <option>Mongolia</option>
+                      <option>Montenegro</option>
+                      <option>Morocco</option>
+                      <option>Mozambique</option>
+                      <option>Myanmar (formerly Burma)</option>
+                      <option>Namibia</option>
+                      <option>Nauru</option>
+                      <option>Nepal</option>
+                      <option>Netherlands</option>
+                      <option>New Zealand</option>
+                      <option>Nicaragua</option>
+                      <option>Niger</option>
+                      <option>Nigeria</option>
+                      <option>North Korea</option>
+                      <option>North Macedonia (formerly Macedonia)</option>
+                      <option>Norway</option>
+                      <option>Oman</option>
+                      <option>Pakistan</option>
+                      <option>Palau</option>
+                      <option>Palestine</option>
+                      <option>Panama</option>
+                      <option>Papua New Guinea</option>
+                      <option>Paraguay</option>
+                      <option>Peru</option>
+                      <option>Philippines</option>
+                      <option>Poland</option>
+                      <option> Portugal</option>
+                      <option>Qatar</option>
+                      <option>Romania</option>
+                      <option> Russia</option>
+                      <option> Rwanda</option>
+                      <option>Saint Kitts and Nevis</option>
+                      <option>Saint Lucia</option>
+                      <option>Saint Vincent and the Grenadines</option>
+                      <option>Samoa</option>
+                      <option>San Marino</option>
+                      <option>Sao Tome and Principe</option>
+                      <option>Saudi Arabia</option>
+                      <option>Senegal</option>
+                      <option>Serbia</option>
+                      <option>Seychelles</option>
+                      <option>Sierra Leone</option>
+                      <option>Singapore</option>
+                      <option>Slovakia</option>
+                      <option>Slovenia</option>
+                      <option>Solomon Islands
+                      <option>Somalia</option>
+                      <option>South Africa</option>
+                      <option>South Korea</option>
+                      <option>South Sudan</option>
+                      <option>Spain</option>
+                      <option>Sri Lanka</option>
+                      <option>Sudan</option>
+                      <option>Suriname</option>
+                      <option>Sweden</option>
+                      <option>Switzerland</option>
+                      <option>Syria</option>
+                      <option> Taiwan</option>
+                      <option>Tajikistan</option>
+                      <option>Tanzania</option>
+                      <option>Thailand</option>
+                      <option>Timor-Leste</option>
+                      <option>Togo   </option>                                 
+                      <option>Tonga</option>
+                      <option>Trinidad and Tobago</option>
+                      <option>Tunisia</option>
+                      <option>Turkey</option>
+                      <option>Turkmenistan</option>
+                      <option>Tuvalu</option>
+                      <option>Uganda</option>
+                      <option> Ukraine</option>
+                      <option> United Arab Emirates (UAE)</option>
+                      <option> United Kingdom (UK)</option>
+                      <option> United States of America (USA)</option>
+                      <option> Uruguay</option>
+                      <option> Uzbekistan</option>
+                      <option> Vanuatu</option>
+                      <option> Vatican City (Holy See)</option>
+                      <option> Venezuela</option>
+                      <option> Vietnam</option>
+                      <option>  Yemen</option>
+                      <option>Zambia</option>
+                      <option> Zimbabwe</option>
+    </select>
+
+    <label for="subject">Subject</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+
+  </form>
+</div>
+            </section>
+
+
+
+<section class="my-3">
+  <div class="py-5">
+    <h2 class="text-center text-uppercase font-weight-bold"><i class="fa fa-male mr-3"></i><u>My profile</u></h2>
+  </div>
+<center>
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="kamlesh.jpg" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h2 class="font-weight-bold mt-3 text-danger"><u>Kamlesh Sharma</u></h2> 
+      <p class="mt-5  text-white font-weight-bold">I am pursuing my B-tech degree in <b><u>Computer science and engineering</u></b> from Poornima Institute of Engineering and Technology,Jaipur..</p>
+        <div style="margin: 5px 0;">
+    <a href="#"><i id="twitter" class="fa fa-twitter ml-2"></i></a>  
+    <a href="https://www.instagram.com/mr.code_breaker_/"><i id="instagram" class="fa fa-instagram ml-2"></i></a>  
+    <a href="#"><i id="facebook" class="fa fa-facebook ml-2"></i></a> 
+
+  </div>
+      <p><button>Contact</button></p>
+    </div>
+  </div>
+</div>
+</center>
+</section>
+
+
+<footer>
+   
+            <marquee scrollamount="10" bgcolor="#2F4F4F"><h6 class="font-weight-bold text-capitalize text-white">this website is created by mr_CODE_BrEaKeR...</h6></marquee>
+
+</footer>
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+<script src="smooth-scroll.js"></script>
+<script>
+  var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+
+
+
+  </body>
+</html>
